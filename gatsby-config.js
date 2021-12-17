@@ -11,7 +11,7 @@ module.exports = {
 		title: "ENS Helper",
 		subHeader: "The Coding Abacus",
 		description: "A Decentralized Blog, powered by Gatsby and IPFS",
-		copyright: "Copyright 2021 The Codacus",
+		copyright: "Open source project By Codacus",
 	},
 	plugins: [
 		"gatsby-plugin-image",

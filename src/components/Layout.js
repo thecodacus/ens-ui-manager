@@ -11,7 +11,9 @@ export default function Layout({ children }) {
 			<Navbar />
 			<div className="content">{children}</div>
 			<footer>
-				<p>Copyright 2021 The Codacus</p>
+				<p>
+					Open Source <a href="https://github.com/thecodacus/ens-ui-manager/tree/main">Project</a> by <a href="https://codacus.com">Codacus</a>
+				</p>
 			</footer>
 		</div>
 		// </Provider>
