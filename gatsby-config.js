@@ -26,20 +26,6 @@ module.exports = {
 				path: `${__dirname}/src/images/`,
 			},
 		},
-		{
-			resolve: `gatsby-source-filesystem`,
-			options: {
-				path: `${__dirname}/static/images`,
-				name: "media",
-			},
-		},
-		{
-			resolve: `gatsby-source-filesystem`,
-			options: {
-				name: `posts`,
-				path: `${__dirname}/src/posts/`,
-			},
-		},
 
 		// content parsers
 		// Including in your Gatsby plugins will transform any paths in your frontmatter
@@ -48,46 +34,6 @@ module.exports = {
 			resolve: "gatsby-transformer-remark",
 			options: {
 				plugins: [
-					`gatsby-plugin-netlify-cms-paths`,
-					{
-						resolve: `gatsby-remark-prismjs`,
-						options: {
-							classPrefix: "language-",
-							inlineCodeMarker: null,
-							aliases: {},
-							showLineNumbers: true,
-							noInlineHighlight: false,
-							languageExtensions: [
-								{
-									language: "superscript",
-									extend: "javascript",
-									definition: {
-										superscript_types: /(SuperType)/,
-									},
-									insertBefore: {
-										function: {
-											superscript_keywords: /(superif|superelse)/,
-										},
-									},
-								},
-							],
-							prompt: {
-								user: "root",
-								host: "localhost",
-								global: false,
-							},
-							// By default the HTML entities <>&'" are escaped.
-							// Add additional HTML escapes by providing a mapping
-							// of HTML entities and their escape value IE: { '}': '&#123;' }
-							escapeEntities: {},
-						},
-					},
-					// {
-					// 	resolve: "gatsby-remark-relative-images",
-					// 	options: {
-					// 		name: "uploads", // Must match the source name ^
-					// 	},
-					// },
 					{
 						resolve: `gatsby-remark-images`,
 						options: {
@@ -95,22 +41,6 @@ module.exports = {
 						},
 					},
 				],
-			},
-		},
-		// netlifycms
-		`gatsby-plugin-netlify-cms-paths`,
-		{
-			resolve: "gatsby-plugin-netlify-cms",
-			options: {
-				modulePath: `${__dirname}/src/admin/index.js`,
-			},
-		},
-
-		// comment system
-		{
-			resolve: `gatsby-plugin-disqus`,
-			options: {
-				shortname: `the-codacus`,
 			},
 		},
 	],
