@@ -21,6 +21,7 @@ export const resolveEns = createAsyncThunk("avatar/resolveName", async (ensName,
 	const provider = new ethers.providers.CloudflareProvider()
 	const address = await provider.resolveName(ensName)
 	console.log(address)
+	if (!address) throw "ENS name not found"
 	thunkAPI.dispatch({ type: "avatar/setUserEns", payload: ensName })
 	thunkAPI.dispatch(fetchNFTs(address))
 	return address
@@ -71,7 +72,7 @@ export const avatarSlice = createSlice({
 		[resolveEns.rejected]: (state, action) => {
 			state.userAddress.loading = false
 			state.userAddress.error = action.error.message
-			// state.userEns = null
+			state.userEns = null
 		},
 
 		[fetchNFTs.pending]: (state, action) => {

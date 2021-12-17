@@ -15,7 +15,8 @@ export default function TextField({ value }) {
 				{/* <label htmlFor="search">Search for stuff</label> */}
 				<input autoComplete="off" value={value} type="text" readOnly name="search" />
 				<button type="submit">
-					<img style={{ width: "2rem", borderRadius: 0 }} src="https://cdn3.iconfinder.com/data/icons/files-folders-line/100/copy-512.png"></img>
+					copy
+					{/* <img style={{ width: "2rem", borderRadius: 0 }} src="https://cdn3.iconfinder.com/data/icons/files-folders-line/100/copy-512.png"></img> */}
 				</button>
 			</form>
 		</div>
