@@ -6,6 +6,13 @@
 
 module.exports = {
 	/* Your site config here */
+	siteMetadata: {
+		url: "thecodacus.com",
+		title: "ENS Helper",
+		subHeader: "The Coding Abacus",
+		description: "A Decentralized Blog, powered by Gatsby and IPFS",
+		copyright: "Copyright 2021 The Codacus",
+	},
 	plugins: [
 		"gatsby-plugin-image",
 		"gatsby-plugin-sharp",
@@ -107,11 +114,4 @@ module.exports = {
 			},
 		},
 	],
-	siteMetadata: {
-		url: "thecodacus.com",
-		title: "Codacus",
-		subHeader: "The Coding Abacus",
-		description: "A Decentralized Blog, powered by Gatsby and IPFS",
-		copyright: "Copyright 2021 The Codacus",
-	},
 }

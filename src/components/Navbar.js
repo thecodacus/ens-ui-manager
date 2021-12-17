@@ -26,11 +26,7 @@ class NavbarClass extends React.Component {
 				<Link to="/">
 					<h1>{title}</h1>
 				</Link>
-				<div className={menuClass.join(" ")}>
-					<Link to="/">Home</Link>
-					<Link to="/posts">Posts</Link>
-					<Link to="/about">About</Link>
-				</div>
+				<div className={menuClass.join(" ")}></div>
 				<div onClick={this.toggle.bind(this)} className={hamburgerClass.join(" ")}>
 					<span className={styles.bar}></span>
 					<span className={styles.bar}></span>
