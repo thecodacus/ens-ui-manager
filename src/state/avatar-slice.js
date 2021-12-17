@@ -58,6 +58,8 @@ export const avatarSlice = createSlice({
 		},
 		clearSelection: (state, action) => {
 			state.selectedNft = null
+			state.nft.data = null
+			state.userAddress.data = null
 		},
 	},
 	extraReducers: {
